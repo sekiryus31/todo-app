@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDoリスト</title>
+</head>
+<body>
+    <h1>ToDoリスト</h1>
+    <form action="/edit/{{ task.id }}" method="POST">
+        <input type="text" name="title" value="{{ task.title }}">
+        <button type="submit">更新</button>
+      </form>
+    <a href="/">戻る</a>
+</body>
+</html>
