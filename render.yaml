@@ -5,7 +5,7 @@ services:
     region: oregon          # デプロイ地域（例）
     plan: free              # 無料プラン
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python3 app.py"
+    startCommand: "gunicorn app.py"
     envVars:                # 環境変数を入れたい場合に書く
       - key: FLASK_ENV
         value: development
