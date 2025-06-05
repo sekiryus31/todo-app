@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: my-flask-app      # Render上でのアプリ名
+    env: python             # 環境はPython
+    region: oregon          # デプロイ地域（例）
+    plan: free              # 無料プラン
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 app.py"
+    envVars:                # 環境変数を入れたい場合に書く
+      - key: FLASK_ENV
+        value: development
